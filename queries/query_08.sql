@@ -1,0 +1,1 @@
+SELECT t.full_name, ROUND(AVG(g.grade), 2) FROM teachers t JOIN subjects s ON s.teacher_id = t.id JOIN grades g ON g.subject_id = s.id WHERE t.id = 1 GROUP BY t.full_name;
